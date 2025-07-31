@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import MainCategories from "../components/MainCategories";
+// import FeaturedPosts from "../components/FeaturedPosts";
+
 
 const Homepage = () => {
   return (
@@ -6,36 +9,51 @@ const Homepage = () => {
       {/* BREADCRUMB */}
       <div className="flex gap-4">
         <Link to="/">Home</Link>
-        <span>·</span>
+        <span>•</span>
         <span className="text-blue-800">Blogs and Articles</span>
       </div>
       {/* INTRODUCTION */}
       <div className="flex justify-between items-center">
         {/* titles */}
         <div className="">
-          <h1 className="text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+          <h1 className="text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </h1>
           <p className="mt-8 text-md md:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eum
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
+            rerum accusantium.
           </p>
         </div>
         {/* animated button */}
         <Link to="write">
-          <svg width="200" height="200" viewBox="0 0 200 200">
+          <svg
+            viewBox="0 0 200 200"
+            width="200"
+            height="200"
+            className="text-lg tracking-widest animate-spin animatedButton"
+            // className="text-lg tracking-widest"
+          >
             <path
               id="circlePath"
               fill="none"
-              d="M 100, 100 m -75, 0 a 75, 75 0 1, 1 150, 0 a 75, 75 0 1, 1 -150 ,0"
-              className="text-lg tracking-widest"
+              d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
             />
             <text>
-              <textPath href="#circlePath" startOffset="0%"> Write your story ·</textPath>
-              <textPath href="#circlePath" startOffset="50%"> Write your idea ·</textPath>
+              <textPath href="#circlePath" startOffset="0%">
+                Write your story •
+              </textPath>
+              <textPath href="#circlePath" startOffset="50%">
+                Share your idea •
+              </textPath>
             </text>
           </svg>
         </Link>
       </div>
-      {/* FEATUTRED POSTS */}
-      {/* POST LIST */}
+      {/* CATEGORIES */}
+      <MainCategories />
+      {/* FEATURED POSTS */}
+      {/* <FeaturedPosts /> */}
+       {/* POST LIST */}
     </div>
   )
 }
