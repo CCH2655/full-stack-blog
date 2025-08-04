@@ -4,7 +4,6 @@ const Image = ({ src, className, w, h, alt }) => {
   return (
     <IKImage 
       urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT}
-      // src={src}
       path={src}
       className={className}
       loading="lazy"
@@ -12,6 +11,12 @@ const Image = ({ src, className, w, h, alt }) => {
       alt={alt}
       width={w}
       height={h}
+      transformation={[
+        {
+          width: w,
+          height: h,
+        }
+      ]}
     />
   )
 }
